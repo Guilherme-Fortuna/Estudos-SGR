@@ -1,0 +1,17 @@
+<div class="mx-auto rounded-2xl border-2 border-dashed border-gray-300">
+<!-- CONTENT GOES HERE -->
+    <div class="p-8" >
+        <form class="campos-form min-w-450 max-w-550">
+            <mat-form-field class="">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. joao.siva@goias.gov.br">
+                @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+                <mat-error>Insira um email válido!</mat-error>
+                }
+                @if (emailFormControl.hasError('required')) {
+                <mat-error>O email <strong>é obrigatório</strong>.</mat-error>
+                }
+            </mat-form-field>
+        </form>
+    </div>
+</div>
