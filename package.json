@@ -33,6 +33,7 @@
         "ng-apexcharts": "1.10.0",
         "ngx-quill": "26.0.1",
         "perfect-scrollbar": "1.5.5",
+        "primeng": "^17.18.1",
         "quill": "2.0.2",
         "rxjs": "7.8.1",
         "tslib": "2.6.2",
