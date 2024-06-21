@@ -1,6 +1,6 @@
 import {
   BreakpointObserver
-} from "./chunk-XLRJ3JNW.js";
+} from "./chunk-RLEB46HN.js";
 import {
   A,
   ALT,
@@ -24,12 +24,12 @@ import {
   Z,
   ZERO,
   hasModifierKey
-} from "./chunk-HN7ZVCGL.js";
+} from "./chunk-Q6PL6MO5.js";
 import {
   coerceBooleanProperty,
   coerceElement,
   coerceNumberProperty
-} from "./chunk-X2OMSDWJ.js";
+} from "./chunk-EI2T3NOC.js";
 import {
   Platform,
   _getEventTarget,
@@ -37,10 +37,10 @@ import {
   _getShadowRoot,
   _isTestEnvironment,
   normalizePassiveListenerOptions
-} from "./chunk-JL7AZPIE.js";
+} from "./chunk-CZE6RSLT.js";
 import {
   DOCUMENT
-} from "./chunk-M4MUQ4C7.js";
+} from "./chunk-CMWNGCWW.js";
 import {
   ANIMATION_MODULE_TYPE,
   APP_ID,
@@ -100,7 +100,7 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-MTLPE3W7.js";
+} from "./chunk-XQU24YB5.js";
 import {
   BehaviorSubject,
   Observable,
@@ -116,7 +116,7 @@ import {
   take,
   takeUntil,
   tap
-} from "./chunk-WSA2QMXP.js";
+} from "./chunk-SJDNSO6V.js";
 import {
   __spreadProps,
   __spreadValues
@@ -4588,6 +4588,7 @@ export {
   FocusTrapFactory,
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader,
+  LiveAnnouncer,
   FocusMonitor,
   A11yModule,
   VERSION2 as VERSION,
@@ -4636,4 +4637,4 @@ export {
   MatRippleLoader,
   _MatInternalFormField
 };
-//# sourceMappingURL=chunk-WNRYNOH5.js.map
+//# sourceMappingURL=chunk-OVOHUHU3.js.map

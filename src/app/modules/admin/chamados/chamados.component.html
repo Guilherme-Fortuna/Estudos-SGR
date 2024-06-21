@@ -1,49 +1,65 @@
 <!-- Success -->
-<!-- <div class="w-full max-w-lg mx-auto">
-    <fuse-alert
-        [type]="'success'"
-        [appearance]="'outline'"
-        class="">
-            <span fuseAlertTitle>Chamado #ID criado com sucesso!</span>
-    </fuse-alert>
-</div> -->
-<div class="w-full max-w-lg mx-auto pt-10">
-    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-                Email*
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" matInput [formControl]="emailFormControl" placeholder="Ex. joao.siva@goias.gov.br">
-                    @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
-                    <mat-error class="text-red-500">Insira um email válido!</mat-error>
-                    }
-        </div>
-        
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="nome">
-                Nome
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nome" type="text" placeholder="Nome completo">
-        </div>
+<div class="flex-col w-full max-w-lg mx-auto">
 
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="tituloChamado">
-            Título
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="tituloChamado" type="text" placeholder="Insira o título do chamado">
-        </div>
+    <div class="w-full max-w-lg mx-auto pt-10">
 
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="descricaoChamado">
-            Descrição
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="descricaoChamado" type="text" placeholder="Descreva sua solicitação">
-        </div>
+        <div class="mt-2 text-3xl font-bold leading-tight tracking-tight md:text-4xl lg:text-6xl mb-7">Criação de Chamados</div>
         
-        <div class="flex justify-end">
-            <button mat-flat-button type="reset" class="text-black border-gray-400 hover:bg-slate-100 p-1" id="limparFormulario">Limpar</button>
-            <button mat-flat-button type="submit" class="text-white bg-purple-600 hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 px-2 ml-1" id="enviarChamado">Enviar chamado</button>
+        <form class="bg-white shadow-md rounded px-8 pt-3 pb-8 mb-4">
+
+            <div class="text-secondary pb-3">Após a criação do chamado, nossa equipe entrará em contato o quanto antes!</div>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                    Email*
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" matInput [formControl]="emailFormControl" placeholder="Ex. joao.siva@goias.gov.br">
+                        @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+                        <mat-error class="text-red-500">Insira um email válido!</mat-error>
+                        }
+            </div>
             
-        </div>
-    </form>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="nome">
+                    Nome
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nome" type="text" placeholder="Nome completo">
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="tituloChamado">
+                Título
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="tituloChamado" type="text" placeholder="Insira o título do chamado">
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="descricaoChamado">
+                Descrição
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="descricaoChamado" type="text" placeholder="Descreva sua solicitação">
+                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="descricaoChamado" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" placeholder=""></textarea>
+            </div>
+
+            <div class="flex justify-end">
+                <button mat-flat-button type="reset" class="text-black border-gray-400 hover:bg-slate-100 p-1" id="limparFormulario">Limpar</button>
+                <button mat-flat-button  type="submit" class="text-white bg-purple-600 hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 px-2 ml-1" id="enviarChamado" 
+                (click)="popUp = !popUp">Enviar chamado</button>
+                
+            </div>
+        </form>
+        
+    </div>
+
+    <div id="popup" class="flex-row-reverse invisible" [class.invisible]="popUp">
+        <fuse-alert
+            [type]="'success'"
+            [appearance]="'outline'"
+            [dismissible]="true"
+            class=""
+            >
+                <span fuseAlertTitle>Chamado #ID criado com sucesso!</span>
+        </fuse-alert>
+    </div>
+    
 </div>

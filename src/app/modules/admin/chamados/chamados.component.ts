@@ -14,7 +14,8 @@ import { FuseAlertComponent } from '@fuse/components/alert';
     templateUrl  : './chamados.component.html',
     styleUrl: './chamados.component.scss',
     imports: [
-        FormsModule, 
+        FormsModule,
+        ReactiveFormsModule,
         MatFormFieldModule, 
         MatInputModule, 
         ReactiveFormsModule,MatButtonModule, 
@@ -26,11 +27,14 @@ import { FuseAlertComponent } from '@fuse/components/alert';
 })
 export class ChamadosComponent
 {
-    /**
-     * Constructor
-     */
-    constructor()
-    {
-    }
+
+    // constructor()
+    // {
+    // }
+    
     emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+
+    popUp= false;
+
+
 }

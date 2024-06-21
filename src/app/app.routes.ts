@@ -75,6 +75,7 @@ export const appRoutes: Route[] = [
         },
         children: [
         {path: 'chamados', loadChildren: () => import('app/modules/admin/chamados/chamados.routes')},
+        {path: 'consultar-risco', loadChildren: () => import('app/modules/admin/consultar-risco/consultar-risco.routes')},
         ]
     }
 ];
