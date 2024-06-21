@@ -5,11 +5,6 @@ import {
   hasModifierKey
 } from "./chunk-HN7ZVCGL.js";
 import {
-  DomPortalOutlet,
-  PortalModule,
-  TemplatePortal
-} from "./chunk-6XIA4OHK.js";
-import {
   coerceArray,
   coerceCssPixelValue,
   coerceElement,
@@ -23,6 +18,11 @@ import {
   getRtlScrollAxisType,
   supportsScrollBehavior
 } from "./chunk-JL7AZPIE.js";
+import {
+  DomPortalOutlet,
+  PortalModule,
+  TemplatePortal
+} from "./chunk-6XIA4OHK.js";
 import {
   DOCUMENT,
   Location
@@ -4598,4 +4598,4 @@ export {
   OverlayModule,
   FullscreenOverlayContainer
 };
-//# sourceMappingURL=chunk-MPO6PQYP.js.map
+//# sourceMappingURL=chunk-2AOKQRNO.js.map

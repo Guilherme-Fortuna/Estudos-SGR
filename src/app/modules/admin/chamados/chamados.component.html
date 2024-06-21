@@ -1,13 +1,13 @@
 <!-- Success -->
-<div class="w-full max-w-lg mx-auto">
+<!-- <div class="w-full max-w-lg mx-auto">
     <fuse-alert
         [type]="'success'"
         [appearance]="'outline'"
         class="">
             <span fuseAlertTitle>Chamado #ID criado com sucesso!</span>
     </fuse-alert>
-</div>
-<div class="w-full max-w-lg pt-10">
+</div> -->
+<div class="w-full max-w-lg mx-auto pt-10">
     <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div class="mb-4">
             <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
@@ -37,12 +37,13 @@
             <label class="block text-gray-700 text-sm font-bold mb-2" for="descricaoChamado">
             Descrição
             </label>
-            <input class="shadow appearance-none border rounded w-full py-20 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="descricaoChamado" type="text" placeholder="Descreva sua solicitação">
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="descricaoChamado" type="text" placeholder="Descreva sua solicitação">
         </div>
-
+        
         <div class="flex justify-end">
             <button mat-flat-button type="reset" class="text-black border-gray-400 hover:bg-slate-100 p-1" id="limparFormulario">Limpar</button>
-            <button mat-flat-button class="text-white bg-purple-600 hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 px-2 ml-1" id="enviarChamado">Enviar chamado</button>
+            <button mat-flat-button type="submit" class="text-white bg-purple-600 hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 px-2 ml-1" id="enviarChamado">Enviar chamado</button>
+            
         </div>
     </form>
-  </div>
+</div>

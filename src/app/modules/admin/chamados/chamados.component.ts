@@ -20,7 +20,7 @@ import { FuseAlertComponent } from '@fuse/components/alert';
         ReactiveFormsModule,MatButtonModule, 
         MatDividerModule, 
         MatIconModule,
-        FuseAlertComponent,
+        FuseAlertComponent
     ],
     encapsulation: ViewEncapsulation.None,
 })
