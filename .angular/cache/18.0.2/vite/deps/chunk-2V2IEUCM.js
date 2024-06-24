@@ -1,28 +1,31 @@
 import {
+  SharedResizeObserver
+} from "./chunk-3AM7JEEM.js";
+import {
   MatCommonModule,
   ObserversModule
-} from "./chunk-OVOHUHU3.js";
+} from "./chunk-SVM4XYII.js";
 import {
   animate,
   state,
   style,
   transition,
   trigger
-} from "./chunk-A3OT5DDR.js";
+} from "./chunk-XH4C4CCE.js";
 import {
   Directionality
-} from "./chunk-Q6PL6MO5.js";
+} from "./chunk-CM3C6H6I.js";
 import {
   coerceBooleanProperty
-} from "./chunk-EI2T3NOC.js";
+} from "./chunk-BCYXTYKJ.js";
 import {
   Platform
-} from "./chunk-CZE6RSLT.js";
+} from "./chunk-W3YXFDIT.js";
 import {
   CommonModule,
   DOCUMENT,
   NgTemplateOutlet
-} from "./chunk-CMWNGCWW.js";
+} from "./chunk-CL45WAKP.js";
 import {
   ANIMATION_MODULE_TYPE,
   Attribute,
@@ -34,7 +37,6 @@ import {
   Directive,
   ElementRef,
   Inject,
-  Injectable,
   InjectionToken,
   Injector,
   Input,
@@ -55,7 +57,6 @@ import {
   ɵɵcontentQuery,
   ɵɵdefineComponent,
   ɵɵdefineDirective,
-  ɵɵdefineInjectable,
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵdirectiveInject,
@@ -80,122 +81,13 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate,
   ɵɵviewQuery
-} from "./chunk-XQU24YB5.js";
+} from "./chunk-PMG3UIYL.js";
 import {
-  Observable,
   Subject,
   Subscription,
-  filter,
   merge,
-  shareReplay,
   takeUntil
 } from "./chunk-SJDNSO6V.js";
-
-// node_modules/@angular/cdk/fesm2022/observers/private.mjs
-var loopLimitExceededErrorHandler = (e) => {
-  if (e instanceof ErrorEvent && e.message === "ResizeObserver loop limit exceeded") {
-    console.error(`${e.message}. This could indicate a performance issue with your app. See https://github.com/WICG/resize-observer/blob/master/explainer.md#error-handling`);
-  }
-};
-var SingleBoxSharedResizeObserver = class {
-  constructor(_box) {
-    this._box = _box;
-    this._destroyed = new Subject();
-    this._resizeSubject = new Subject();
-    this._elementObservables = /* @__PURE__ */ new Map();
-    if (typeof ResizeObserver !== "undefined") {
-      this._resizeObserver = new ResizeObserver((entries) => this._resizeSubject.next(entries));
-    }
-  }
-  /**
-   * Gets a stream of resize events for the given element.
-   * @param target The element to observe.
-   * @return The stream of resize events for the element.
-   */
-  observe(target) {
-    if (!this._elementObservables.has(target)) {
-      this._elementObservables.set(target, new Observable((observer) => {
-        const subscription = this._resizeSubject.subscribe(observer);
-        this._resizeObserver?.observe(target, {
-          box: this._box
-        });
-        return () => {
-          this._resizeObserver?.unobserve(target);
-          subscription.unsubscribe();
-          this._elementObservables.delete(target);
-        };
-      }).pipe(
-        filter((entries) => entries.some((entry) => entry.target === target)),
-        // Share a replay of the last event so that subsequent calls to observe the same element
-        // receive initial sizing info like the first one. Also enable ref counting so the
-        // element will be automatically unobserved when there are no more subscriptions.
-        shareReplay({
-          bufferSize: 1,
-          refCount: true
-        }),
-        takeUntil(this._destroyed)
-      ));
-    }
-    return this._elementObservables.get(target);
-  }
-  /** Destroys this instance. */
-  destroy() {
-    this._destroyed.next();
-    this._destroyed.complete();
-    this._resizeSubject.complete();
-    this._elementObservables.clear();
-  }
-};
-var _SharedResizeObserver = class _SharedResizeObserver {
-  constructor() {
-    this._observers = /* @__PURE__ */ new Map();
-    this._ngZone = inject(NgZone);
-    if (typeof ResizeObserver !== "undefined" && (typeof ngDevMode === "undefined" || ngDevMode)) {
-      this._ngZone.runOutsideAngular(() => {
-        window.addEventListener("error", loopLimitExceededErrorHandler);
-      });
-    }
-  }
-  ngOnDestroy() {
-    for (const [, observer] of this._observers) {
-      observer.destroy();
-    }
-    this._observers.clear();
-    if (typeof ResizeObserver !== "undefined" && (typeof ngDevMode === "undefined" || ngDevMode)) {
-      window.removeEventListener("error", loopLimitExceededErrorHandler);
-    }
-  }
-  /**
-   * Gets a stream of resize events for the given target element and box type.
-   * @param target The element to observe for resizes.
-   * @param options Options to pass to the `ResizeObserver`
-   * @return The stream of resize events for the element.
-   */
-  observe(target, options) {
-    const box = options?.box || "content-box";
-    if (!this._observers.has(box)) {
-      this._observers.set(box, new SingleBoxSharedResizeObserver(box));
-    }
-    return this._observers.get(box).observe(target);
-  }
-};
-_SharedResizeObserver.ɵfac = function SharedResizeObserver_Factory(t) {
-  return new (t || _SharedResizeObserver)();
-};
-_SharedResizeObserver.ɵprov = ɵɵdefineInjectable({
-  token: _SharedResizeObserver,
-  factory: _SharedResizeObserver.ɵfac,
-  providedIn: "root"
-});
-var SharedResizeObserver = _SharedResizeObserver;
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(SharedResizeObserver, [{
-    type: Injectable,
-    args: [{
-      providedIn: "root"
-    }]
-  }], () => [], null);
-})();
 
 // node_modules/@angular/material/fesm2022/form-field.mjs
 var _c0 = ["notch"];
@@ -1591,4 +1483,4 @@ export {
   MatFormField,
   MatFormFieldModule
 };
-//# sourceMappingURL=chunk-AFB67GCP.js.map
+//# sourceMappingURL=chunk-2V2IEUCM.js.map

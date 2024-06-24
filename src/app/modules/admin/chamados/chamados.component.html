@@ -42,8 +42,8 @@
             </div>
 
             <div class="flex justify-end">
-                <button mat-flat-button type="reset" class="text-black border-gray-400 hover:bg-slate-100 p-1" id="limparFormulario">Limpar</button>
-                <button mat-flat-button  type="submit" class="text-white bg-purple-600 hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 px-2 ml-1" id="enviarChamado" 
+                <button mat-flat-button type="reset" class="bg-accent-300 text-on-accent-300 p-1" id="limparFormulario">Limpar</button>
+                <button mat-flat-button  type="submit" class="bg-primary text-on-primary px-2 ml-1" id="enviarChamado" 
                 (click)="popUp = !popUp">Enviar chamado</button>
                 
             </div>
@@ -51,7 +51,7 @@
         
     </div>
 
-    <div id="popup" class="flex-row-reverse invisible" [class.invisible]="popUp">
+    <!-- <div id="popup" class="flex-row-reverse invisible" [class.invisible]="popUp">
         <fuse-alert
             [type]="'success'"
             [appearance]="'outline'"
@@ -60,6 +60,6 @@
             >
                 <span fuseAlertTitle>Chamado #ID criado com sucesso!</span>
         </fuse-alert>
-    </div>
+    </div> -->
     
 </div>

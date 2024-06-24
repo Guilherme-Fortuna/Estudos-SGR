@@ -1,6 +1,6 @@
 import {
   BreakpointObserver
-} from "./chunk-RLEB46HN.js";
+} from "./chunk-VBCCMZPL.js";
 import {
   A,
   ALT,
@@ -24,12 +24,12 @@ import {
   Z,
   ZERO,
   hasModifierKey
-} from "./chunk-Q6PL6MO5.js";
+} from "./chunk-CM3C6H6I.js";
 import {
   coerceBooleanProperty,
   coerceElement,
   coerceNumberProperty
-} from "./chunk-EI2T3NOC.js";
+} from "./chunk-BCYXTYKJ.js";
 import {
   Platform,
   _getEventTarget,
@@ -37,10 +37,10 @@ import {
   _getShadowRoot,
   _isTestEnvironment,
   normalizePassiveListenerOptions
-} from "./chunk-CZE6RSLT.js";
+} from "./chunk-W3YXFDIT.js";
 import {
   DOCUMENT
-} from "./chunk-CMWNGCWW.js";
+} from "./chunk-CL45WAKP.js";
 import {
   ANIMATION_MODULE_TYPE,
   APP_ID,
@@ -100,7 +100,7 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-XQU24YB5.js";
+} from "./chunk-PMG3UIYL.js";
 import {
   BehaviorSubject,
   Observable,
@@ -120,7 +120,7 @@ import {
 import {
   __spreadProps,
   __spreadValues
-} from "./chunk-X6JV76XL.js";
+} from "./chunk-PZQZAEDH.js";
 
 // node_modules/@angular/cdk/fesm2022/observers.mjs
 function shouldIgnoreRecord(record) {
@@ -4578,6 +4578,7 @@ var _MatInternalFormField = __MatInternalFormField;
 })();
 
 export {
+  CdkObserveContent,
   ObserversModule,
   addAriaReferencedId,
   removeAriaReferencedId,
@@ -4588,8 +4589,8 @@ export {
   FocusTrapFactory,
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader,
-  LiveAnnouncer,
   FocusMonitor,
+  CdkMonitorFocus,
   A11yModule,
   VERSION2 as VERSION,
   AnimationCurves,
@@ -4637,4 +4638,4 @@ export {
   MatRippleLoader,
   _MatInternalFormField
 };
-//# sourceMappingURL=chunk-OVOHUHU3.js.map
+//# sourceMappingURL=chunk-SVM4XYII.js.map

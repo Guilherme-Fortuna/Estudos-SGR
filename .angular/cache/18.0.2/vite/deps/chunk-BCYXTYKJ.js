@@ -1,6 +1,6 @@
 import {
   ElementRef
-} from "./chunk-XQU24YB5.js";
+} from "./chunk-PMG3UIYL.js";
 
 // node_modules/@angular/cdk/fesm2022/coercion.mjs
 function coerceBooleanProperty(value) {
@@ -47,4 +47,4 @@ export {
   coerceElement,
   coerceStringArray
 };
-//# sourceMappingURL=chunk-EI2T3NOC.js.map
+//# sourceMappingURL=chunk-BCYXTYKJ.js.map

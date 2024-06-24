@@ -11,7 +11,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
     },
     {
         id   : 'consultar-risco',
-        title: 'Consultar Riscos',
+        title: 'Risco',
         type : 'basic',
         icon : 'heroicons_outline:chart-pie',
         link : '/consultar-risco'
@@ -27,7 +27,7 @@ export const compactNavigation: FuseNavigationItem[] = [
     },
     {
         id   : 'consultar-risco',
-        title: 'Consultar Riscos',
+        title: 'Risco',
         type : 'basic',
         icon : 'heroicons_outline:chart-pie',
         link : '/consultar-risco'
@@ -43,7 +43,7 @@ export const futuristicNavigation: FuseNavigationItem[] = [
     },
     {
         id   : 'consultar-risco',
-        title: 'Consultar Riscos',
+        title: 'Risco',
         type : 'basic',
         icon : 'heroicons_outline:chart-pie',
         link : '/consultar-risco'
@@ -59,7 +59,7 @@ export const horizontalNavigation: FuseNavigationItem[] = [
     },
     {
         id   : 'consultar-risco',
-        title: 'Consultar Riscos',
+        title: 'Risco',
         type : 'basic',
         icon : 'heroicons_outline:chart-pie',
         link : '/consultar-risco'
