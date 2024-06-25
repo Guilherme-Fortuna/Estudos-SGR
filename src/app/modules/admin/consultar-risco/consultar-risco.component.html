@@ -23,25 +23,25 @@
                     <div class="max-w-200 flex">
                         <mat-form-field class="w-full flex-shrink">
                             <mat-label>Objetivo(s) Estratégico(s)*</mat-label>
-                            <input matInput>
+                            <input matInput [(ngModel)]="objetivoEstrategico" >
                         </mat-form-field>
                         <div class="flex-shrink-0 pt-1 mt-6">
-                            <button mat-flat-button type="submit" class="bg-primary text-on-primary p-3 ml-1"><mat-icon
+                            <button mat-flat-button (click)="salvarObjetivo()" class="bg-primary text-on-primary p-3 ml-1"><mat-icon
                                     svgIcon="heroicons_outline:plus" class="pr-1.5"></mat-icon>Incluir</button>
                         </div>
 
                     </div>
 
-                    <div class="w-full mb-6 flex ">
-                        <table mat-table [dataSource]="dataSource" class="">
-                            <!-- Position Column -->
-                            <ng-container matColumnDef="risco" class="flex-row ">
-                                <td mat-cell *matCellDef="let element" class="border-2"> {{element.risco}}
-                                    <mat-icon svgIcon="heroicons_outline:trash" class="justify-end"></mat-icon>
-                                </td>
-                            </ng-container>
-                            <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="border-2"></tr>
-                        </table>
+                    <div class="w-full mb-6">
+                        <div class="bg-white dark:bg-transparent shadow-md rounded-lg">
+                            <div class="p-2 pt-1 border-2 flex justify-between items-center" *ngFor="let objetivo of objetivosEstrategicos">
+                                <span class="">{{ objetivo.objetivoEstrategico }}</span>
+                                <button class="">
+                                    <mat-icon class="hover:text-red-600 mt-3 ml-2"
+                                        svgIcon="heroicons_outline:trash"></mat-icon>
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="max-w-200 flex">
