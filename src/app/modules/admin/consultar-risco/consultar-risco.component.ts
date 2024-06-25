@@ -11,15 +11,14 @@ import { MatInputModule } from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 
 export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  risco: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
+  {risco: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae mauris non nisi porta lacinia.'},
+  {risco: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae mauris non nisi porta lacinia.'},
+  {risco: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae mauris non nisi porta lacinia.'},
+  {risco: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae mauris non nisi porta lacinia.'},
 ];
 
 @Component({
@@ -49,7 +48,7 @@ export class ConsultarRiscoComponent {
 
   formFieldHelpers: string[] = [''];
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['risco'];
   dataSource = ELEMENT_DATA;
 }
 

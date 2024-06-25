@@ -13,11 +13,10 @@ import {
   PortalModule,
   TemplatePortal,
   TemplatePortalDirective
-} from "./chunk-PRRRZPNX.js";
-import "./chunk-CL45WAKP.js";
-import "./chunk-PMG3UIYL.js";
-import "./chunk-SJDNSO6V.js";
-import "./chunk-AOF462FV.js";
+} from "./chunk-EPGTEQZN.js";
+import "./chunk-UGY4PVCA.js";
+import "./chunk-VPZHWU2R.js";
+import "./chunk-WSA2QMXP.js";
 import "./chunk-PZQZAEDH.js";
 export {
   BasePortalHost,

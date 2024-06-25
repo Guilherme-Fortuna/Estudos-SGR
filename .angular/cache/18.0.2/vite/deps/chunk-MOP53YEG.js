@@ -2,32 +2,32 @@ import {
   ScrollDispatcher,
   ScrollingModule,
   ViewportRuler
-} from "./chunk-B4YDI737.js";
+} from "./chunk-MPUEEURR.js";
 import {
   BidiModule,
   Directionality,
   ESCAPE,
   hasModifierKey
-} from "./chunk-CM3C6H6I.js";
-import {
-  DomPortalOutlet,
-  PortalModule,
-  TemplatePortal
-} from "./chunk-PRRRZPNX.js";
+} from "./chunk-V7B37AMU.js";
 import {
   coerceArray,
   coerceCssPixelValue
-} from "./chunk-BCYXTYKJ.js";
+} from "./chunk-6OHRNTD2.js";
 import {
   Platform,
   _getEventTarget,
   _isTestEnvironment,
   supportsScrollBehavior
-} from "./chunk-W3YXFDIT.js";
+} from "./chunk-GMQF2XSW.js";
+import {
+  DomPortalOutlet,
+  PortalModule,
+  TemplatePortal
+} from "./chunk-EPGTEQZN.js";
 import {
   DOCUMENT,
   Location
-} from "./chunk-CL45WAKP.js";
+} from "./chunk-UGY4PVCA.js";
 import {
   ANIMATION_MODULE_TYPE,
   ApplicationRef,
@@ -61,7 +61,7 @@ import {
   ɵɵdefineNgModule,
   ɵɵdirectiveInject,
   ɵɵinject
-} from "./chunk-PMG3UIYL.js";
+} from "./chunk-VPZHWU2R.js";
 import {
   Subject,
   Subscription,
@@ -69,7 +69,7 @@ import {
   merge,
   takeUntil,
   takeWhile
-} from "./chunk-SJDNSO6V.js";
+} from "./chunk-WSA2QMXP.js";
 import {
   __spreadProps,
   __spreadValues
@@ -2870,4 +2870,4 @@ export {
   OverlayModule,
   FullscreenOverlayContainer
 };
-//# sourceMappingURL=chunk-NAQJZM5N.js.map
+//# sourceMappingURL=chunk-MOP53YEG.js.map
