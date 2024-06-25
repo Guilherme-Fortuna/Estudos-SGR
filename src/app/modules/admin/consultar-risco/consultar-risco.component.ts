@@ -46,8 +46,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 export class ConsultarRiscoComponent {
 
-  formFieldHelpers: string[] = [''];
-
   displayedColumns: string[] = ['risco'];
   dataSource = ELEMENT_DATA;
 }
