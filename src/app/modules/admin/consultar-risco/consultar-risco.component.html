@@ -12,7 +12,7 @@
     </div>
     <div class="max-w-320">
         <div class="flex-col mx-6">
-            <mat-tab-group [animationDuration]="'500ms'">
+            <mat-tab-group [animationDuration]="'250ms'">
                 <mat-tab label="Identificação do Risco">
                     <div class="max-w-200">
                         <mat-form-field class="flex">
@@ -23,18 +23,20 @@
                     <div class="max-w-200 flex">
                         <mat-form-field class="w-full flex-shrink">
                             <mat-label>Objetivo(s) Estratégico(s)*</mat-label>
-                            <input matInput [(ngModel)]="objetivoEstrategico" >
+                            <input matInput [(ngModel)]="objetivoEstrategico">
                         </mat-form-field>
                         <div class="flex-shrink-0 pt-1 mt-6">
-                            <button mat-flat-button (click)="salvarObjetivo()" class="bg-primary text-on-primary p-3 ml-1"><mat-icon
-                                    svgIcon="heroicons_outline:plus" class="pr-1.5"></mat-icon>Incluir</button>
+                            <button mat-flat-button (click)="salvarObjetivo()"
+                                class="bg-primary text-on-primary p-3 ml-1"><mat-icon svgIcon="heroicons_outline:plus"
+                                    class="pr-1.5"></mat-icon>Incluir</button>
                         </div>
 
                     </div>
 
                     <div class="w-full mb-6">
-                        <div class="bg-white dark:bg-transparent shadow-md rounded-lg">
-                            <div class="p-2 pt-1 border-2 flex justify-between items-center" *ngFor="let objetivo of objetivosEstrategicos">
+                        <div class="shadow-sm overflow-y-auto max-h-50 border-2 rounded-md">
+                            <div class="p-2 pt-1 flex justify-between items-center border-b-2 border-gray-600 border-opacity-20"
+                                *ngFor="let objetivo of objetivosEstrategicos">
                                 <span class="">{{ objetivo.objetivoEstrategico }}</span>
                                 <button class="">
                                     <mat-icon class="hover:text-red-600 mt-3 ml-2"

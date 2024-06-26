@@ -32,7 +32,6 @@ import { CommonModule } from '@angular/common';
     MatListModule,
     FormsModule,
     CommonModule
-
   ],
   templateUrl: './consultar-risco.component.html',
   styleUrl: './consultar-risco.component.scss',

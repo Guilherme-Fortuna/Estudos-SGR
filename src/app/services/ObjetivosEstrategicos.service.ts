@@ -12,7 +12,7 @@ export type objetivosEstrategi = {
 })
 
 export class ObjetivosEstrategicosService {
-  apiUrl = 'http://localhost:3000/teste';
+  apiUrl = 'http://localhost:3000/riscos';
   constructor(private http: HttpClient) { }
 
   pegarObjetivos(): Observable<objetivosEstrategi[]> {
