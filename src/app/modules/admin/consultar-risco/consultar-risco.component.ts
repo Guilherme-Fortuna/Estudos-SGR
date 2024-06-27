@@ -9,7 +9,7 @@ import { FuseHighlightComponent } from '@fuse/components/highlight';
 import { fuseAnimations } from '@fuse/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
-import { ObjetivosEstrategicosService, objetivosEstrategi } from 'app/services/ObjetivosEstrategicos.service';
+import { ObjetivosEstrategicosService, objetivosEstrategicos, objetivosOperacionais } from 'app/services/ObjetivosEstrategicos.service';
 import { MatListModule } from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -42,15 +42,17 @@ import { CommonModule } from '@angular/common';
 export class ConsultarRiscoComponent implements OnInit {
 
 
-  objetivosEstrategicos: objetivosEstrategi[] = [];
-  errorMessage: string = '';
+  objetivosEstrategicos: objetivosEstrategicos[] = [];
   objetivoEstrategico : string = '';
+  objetivosOperacionais: objetivosOperacionais[] = [];
+  objetivoOperacional : string = '';
+  errorMessage: string = '';
 
   constructor(private objetivosEstrategicosService: ObjetivosEstrategicosService) { }
 
   ngOnInit(): void {
     this.objetivosEstrategicosService.pegarObjetivos().subscribe(
-      (data: objetivosEstrategi[]) => {
+      (data: objetivosEstrategicos[]) => {
         this.objetivosEstrategicos = data;
       },
       (error) => {
@@ -60,13 +62,28 @@ export class ConsultarRiscoComponent implements OnInit {
     );
   }
 
-  salvarObjetivo() {
-    const objetivo: objetivosEstrategi = {
+  salvarObjetivoEstrategico() {
+    const objetivoEstrategico: objetivosEstrategicos = {
       objetivoEstrategico: this.objetivoEstrategico,
-
     };
+    
 
-    this.objetivosEstrategicosService.criarObjetivos(objetivo).subscribe(
+    this.objetivosEstrategicosService.criarObjetivosEstrategicos(objetivoEstrategico).subscribe(
+      (response) => {
+
+      },
+      (error) => {
+        console.error('Erro ao Criar Usuario:', error);
+      }
+    );
+  }
+  salvarObjetivoOperacional() {
+    const objetivoOperacional: objetivosOperacionais = {
+      objetivoOperacional: this.objetivoOperacional,
+    };
+    
+
+    this.objetivosEstrategicosService.criarObjetivosOperacionais(objetivoOperacional).subscribe(
       (response) => {
 
       },

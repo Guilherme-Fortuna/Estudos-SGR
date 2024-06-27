@@ -20,13 +20,14 @@
                             <input matInput>
                         </mat-form-field>
                     </div>
+
                     <div class="max-w-200 flex">
                         <mat-form-field class="w-full flex-shrink">
                             <mat-label>Objetivo(s) Estratégico(s)*</mat-label>
                             <input matInput [(ngModel)]="objetivoEstrategico">
                         </mat-form-field>
                         <div class="flex-shrink-0 pt-1 mt-6">
-                            <button mat-flat-button (click)="salvarObjetivo()"
+                            <button mat-flat-button (click)="salvarObjetivoEstrategico()"
                                 class="bg-primary text-on-primary p-3 ml-1"><mat-icon svgIcon="heroicons_outline:plus"
                                     class="pr-1.5"></mat-icon>Incluir</button>
                         </div>
@@ -49,11 +50,23 @@
                     <div class="max-w-200 flex">
                         <mat-form-field class="w-full flex-shrink">
                             <mat-label>Objetivo(s) Operacional(is)*</mat-label>
-                            <input matInput>
+                            <input matInput [(ngModel)]="objetivoOperacional">
                         </mat-form-field>
                         <div class="flex-shrink-0 pt-1 mt-6">
-                            <button mat-flat-button type="submit" class="bg-primary text-on-primary p-3 ml-1"><mat-icon
+                            <button mat-flat-button (click)="salvarObjetivoOperacional()" class="bg-primary text-on-primary p-3 ml-1"><mat-icon
                                     svgIcon="heroicons_outline:plus" class="pr-1.5"></mat-icon>Incluir</button>
+                        </div>
+                    </div>
+                    <div class="w-full mb-6">
+                        <div class="shadow-sm overflow-y-auto max-h-50 border-2 rounded-md">
+                            <div class="p-2 pt-1 flex justify-between items-center border-b-2 border-gray-600 border-opacity-20"
+                                *ngFor="let objetivo of objetivosEstrategicos">
+                                <span class="">{{ objetivo.objetivoOperacional }}</span>
+                                <button class="">
+                                    <mat-icon class="hover:text-red-600 mt-3 ml-2"
+                                        svgIcon="heroicons_outline:trash"></mat-icon>
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="w-full mb-6">
